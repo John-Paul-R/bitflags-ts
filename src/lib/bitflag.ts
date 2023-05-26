@@ -64,6 +64,7 @@ type BitFlagEnum<TValues extends string[]> = {
 } & {
   union: (...other: number[]) => SimpleBitFlagUnion;
   stringValueOf: (value: number) => string | undefined;
+  keys: TValues;
 };
 type SimpleBitFlagUnion = {
   value: number;
@@ -93,6 +94,12 @@ export const bitFlag = <TArr extends string[]>(
 
   Object.defineProperty(retEnum, 'stringValueOf', {
     value: (val: number): string | undefined => numsToStrings[val],
+    writable: false,
+  });
+
+  Object.defineProperty(retEnum, 'keys', {
+    value: values,
+    writable: false,
   });
 
   for (let i = 0; i < values.length; i++) {
