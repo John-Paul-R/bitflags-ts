@@ -63,9 +63,17 @@ test('bitFlagIfy_Union_HasFlag', (t) => {
   }
 
   {
-    const union = permsFlags.union(1, 2, 3);
-    t.false(union.hasFlag(permsFlags.Read));
-    t.false(union.hasFlag(permsFlags.Write));
+    const union = permsFlags.union(1, 2, 4);
+    t.true(union.hasFlag(permsFlags.Read));
+    t.true(union.hasFlag(permsFlags.Write));
+    t.true(union.hasFlag(permsFlags.Execute));
+    t.false(union.hasFlag(0b1000));
+  }
+
+  {
+    const union = permsFlags.union(3);
+    t.true(union.hasFlag(permsFlags.Read));
+    t.true(union.hasFlag(permsFlags.Write));
     t.false(union.hasFlag(permsFlags.Execute));
     t.false(union.hasFlag(0b1000));
   }
@@ -127,9 +135,17 @@ test('bitFlag_Union_HasFlag', (t) => {
   }
 
   {
-    const union = permsFlags.union(1, 2, 3);
-    t.false(union.hasFlag(permsFlags.Read));
-    t.false(union.hasFlag(permsFlags.Write));
+    const union = permsFlags.union(1, 2, 4);
+    t.true(union.hasFlag(permsFlags.Read));
+    t.true(union.hasFlag(permsFlags.Write));
+    t.true(union.hasFlag(permsFlags.Execute));
+    t.false(union.hasFlag(0b1000));
+  }
+
+  {
+    const union = permsFlags.union(3);
+    t.true(union.hasFlag(permsFlags.Read));
+    t.true(union.hasFlag(permsFlags.Write));
     t.false(union.hasFlag(permsFlags.Execute));
     t.false(union.hasFlag(0b1000));
   }
