@@ -58,3 +58,52 @@ export const bitFlagIfy = <
     ) => BitFlagUnion<TEnum, TValues>;
   };
 };
+
+type BitFlagEnum<TValues extends string[]> = {
+  [key in TValues[number]]: number;
+} & {
+  union: (...other: number[]) => SimpleBitFlagUnion;
+  stringValueOf: (value: number) => string | undefined;
+};
+type SimpleBitFlagUnion = {
+  value: number;
+  hasFlag: (flag: number) => boolean;
+};
+
+export const bitFlag = <TArr extends string[]>(
+  ...values: TArr
+): BitFlagEnum<TArr> => {
+  // @ts-expect-error we're building this out, dw
+  const retEnum: BitFlagEnum<TArr> = {};
+  const numsToStrings: Record<number, string> = {};
+  Object.defineProperty(retEnum, 'union', {
+    value: (...other: number[]): SimpleBitFlagUnion => {
+      let ret = 0;
+      for (let i = 0; i < other.length; i++) {
+        const val = other[i];
+        ret |= val;
+      }
+      return {
+        value: ret,
+        hasFlag: (val) => (ret & val) === val,
+      };
+    },
+    writable: false,
+  });
+
+  Object.defineProperty(retEnum, 'stringValueOf', {
+    value: (val: number): string | undefined => numsToStrings[val],
+  });
+
+  for (let i = 0; i < values.length; i++) {
+    const value = values[i];
+
+    const numValue = 1 << i;
+    // @ts-expect-error this is valid for now... mostly. Would be ideal to
+    // modify the return type to include the new 'number' values
+    retEnum[value] = numValue;
+    numsToStrings[numValue] = value;
+  }
+
+  return retEnum;
+};
