@@ -59,7 +59,7 @@ export const bitFlagIfy = <
   };
 };
 
-type BitFlagEnum<TValues extends string[]> = {
+type BitFlagEnum<TValues extends readonly string[]> = {
   [key in TValues[number]]: number;
 } & {
   union: (...other: number[]) => SimpleBitFlagUnion;
@@ -71,7 +71,7 @@ type SimpleBitFlagUnion = {
   hasFlag: (flag: number) => boolean;
 };
 
-export const bitFlag = <TArr extends string[]>(
+export const bitFlag = <TArr extends readonly string[]>(
   ...values: TArr
 ): BitFlagEnum<TArr> => {
   // @ts-expect-error we're building this out, dw
