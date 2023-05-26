@@ -1,1 +1,1 @@
-export * from './lib/bitflag';
+export { bitFlag } from './lib/bitflag';
