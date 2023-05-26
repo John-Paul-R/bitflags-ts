@@ -135,9 +135,9 @@ test('bitFlag_Union_HasFlag', (t) => {
   }
 });
 
-test('bitFlag_kets', (t) => {
-    const keys = permsFlags.keys;
-    t.is(keys[0], 'Read');
-    t.is(keys[1], 'Write');
-    t.is(keys[2], 'Execute');
-  });
+test('bitFlag_keys', (t) => {
+  const keys = permsFlags.keys;
+  t.is(keys[0], 'Read');
+  t.is(keys[1], 'Write');
+  t.is(keys[2], 'Execute');
+});
