@@ -23,7 +23,8 @@
     "typedoc",
     "untracked",
     "bitflag",
-    "bitflags"
+    "bitflags",
+    "nums"
   ],
   "flagWords": [],
   "ignorePaths": [
