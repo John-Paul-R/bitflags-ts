@@ -3,8 +3,11 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
   "words": [
-    "bitjson",
     "bitauth",
+    "bitflag",
+    "bitflagify",
+    "bitflags",
+    "bitjson",
     "cimg",
     "circleci",
     "codecov",
@@ -17,14 +20,12 @@
     "globby",
     "libauth",
     "mkdir",
+    "nums",
     "prettierignore",
     "sandboxed",
     "transpiled",
     "typedoc",
-    "untracked",
-    "bitflag",
-    "bitflags",
-    "nums"
+    "untracked"
   ],
   "flagWords": [],
   "ignorePaths": [
