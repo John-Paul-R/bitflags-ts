@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.1.0...bitflags-ts-v1.2.0) (2023-05-27)
+
+
+### Features
+
+* **build:** build dist with rollup (see 5744c459de7bca2c9a08842c71d79a1d30fa5e3e) ([7c2e588](https://github.com/John-Paul-R/bitflags-ts/commit/7c2e588e573016699ce65649200934c15a28ba97))
+* types to disallow non-"as const" arrs, related docs ([79d52f4](https://github.com/John-Paul-R/bitflags-ts/commit/79d52f4179491a8512dc9e052865e304f2079e5c))
+
 ## [1.1.0](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.0.4...bitflags-ts-v1.1.0) (2023-05-27)
 
 
