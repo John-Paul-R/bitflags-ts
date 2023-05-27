@@ -14,7 +14,10 @@
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">bitflags-ts</a></li>
 <li><a href="BitFlagEnumValue.html">BitFlagEnumValue</a></li></ul>
-<h1>Interface BitFlagEnumValue&lt;TValues&gt;</h1></div> 
+<h1>Interface BitFlagEnumValue&lt;TValues&gt;</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Represents a bitflag enum member</p>
+</div></section> 
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
@@ -27,7 +30,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">BitFlagEnumValue</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L50">lib/bitflag_classes.ts:50</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L99">lib/bitflag_classes.ts:99</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -54,15 +57,20 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="hasFlag.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">other</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography">
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">union</span><span class="hl-1"> = </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">.</span><span class="hl-3">or</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">);</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">) </span><span class="hl-6">// false</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">other</span>: <a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p><code>true</code> if <code>other</code> is present in <code>this</code>, <code>false</code> otherwise</p>
+</li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from <a href="BitFlagValue.html">BitFlagValue</a>.<a href="BitFlagValue.html#hasFlag">hasFlag</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L46">lib/bitflag_classes.ts:46</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L80">lib/bitflag_classes.ts:80</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="intersect" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>intersect</span><a href="#intersect" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">intersect</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">others</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -73,6 +81,11 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="intersect.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">others</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a new BitFlagValue representing the intersection of the operands</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">union</span><span class="hl-1"> = </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">.</span><span class="hl-3">or</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">).</span><span class="hl-3">intersect</span><span class="hl-1">([</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">, </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">]);</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">) </span><span class="hl-6">// false</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">) </span><span class="hl-6">// false</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -81,7 +94,7 @@
 <h4 class="tsd-returns-title">Returns <a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from <a href="BitFlagValue.html">BitFlagValue</a>.<a href="BitFlagValue.html#intersect">intersect</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L47">lib/bitflag_classes.ts:47</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L93">lib/bitflag_classes.ts:93</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="or" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>or</span><a href="#or" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">or</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">other</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -92,6 +105,11 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="or.__type-4.__type-5"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">other</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a new BitFlagValue representing the union of the operands</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">union</span><span class="hl-1"> = </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">.</span><span class="hl-3">or</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">);</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">) </span><span class="hl-6">// false</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -100,12 +118,12 @@
 <h4 class="tsd-returns-title">Returns <a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from <a href="BitFlagValue.html">BitFlagValue</a>.<a href="BitFlagValue.html#or">or</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L44">lib/bitflag_classes.ts:44</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L59">lib/bitflag_classes.ts:59</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="stringValue" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>string<wbr/>Value</span><a href="#stringValue" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">string<wbr/>Value</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">SingleEnumValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L52">lib/bitflag_classes.ts:52</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L101">lib/bitflag_classes.ts:101</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="union" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>union</span><a href="#union" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">union</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">others</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -116,6 +134,11 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="union.__type-6.__type-7"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">others</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a new BitFlagValue representing the union of the operands</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">union</span><span class="hl-1"> = </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">.</span><span class="hl-3">union</span><span class="hl-1">([</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">, </span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">]);</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Red</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Blue</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Green</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-5">union</span><span class="hl-1">.</span><span class="hl-3">hasFlag</span><span class="hl-1">(</span><span class="hl-5">Color</span><span class="hl-1">.</span><span class="hl-5">Purple</span><span class="hl-1">) </span><span class="hl-6">// false</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -124,13 +147,15 @@
 <h4 class="tsd-returns-title">Returns <a href="BitFlagValue.html" class="tsd-signature-type tsd-kind-interface">BitFlagValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from <a href="BitFlagValue.html">BitFlagValue</a>.<a href="BitFlagValue.html#union">union</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L45">lib/bitflag_classes.ts:45</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L70">lib/bitflag_classes.ts:70</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="value" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>value</span><a href="#value" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">value</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">value</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The backing bitflag value</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="BitFlagValue.html">BitFlagValue</a>.<a href="BitFlagValue.html#value">value</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/646dabc/src/lib/bitflag_classes.ts#L43">lib/bitflag_classes.ts:43</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L49">lib/bitflag_classes.ts:49</a></li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
