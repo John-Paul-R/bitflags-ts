@@ -7,6 +7,17 @@ An enum-like type for representing & using bit flags
 
 ## Usage
 
+_Note: I don't particularly recommend using this package!_ Bit flags are great,
+and can be created and used quite simply in TypeScript (demonstrated in
+fantastically concise fashion in [this SO
+answer](https://stackoverflow.com/a/39359953/8105643)). This package abstracts
+away the bitwise operations, but is not without performance cost. As long as
+you're fine with seeing `|` and `&`, use native bit flag enums!
+
+Also note: JS coerces `number`s to 32 bits before performing any bitwise
+operations, so the maximum number of flags that can be represented by a bit
+flag type is 32!
+
 ### `bitFlag`
 
 ```ts
@@ -21,10 +32,10 @@ const canExecute = userPermissions.hasFlag(PermissionsFlag.Execute); // false
 
 ### `createBitFlagsEnum`
 
-An `createBitFlagsEnum` alternative syntax that creates an 'enum' with
-object-valued (instead of Number-valued, as in `bitFlag`) members. While this
-has higher one-time allocation cost, there are more utilities for working with
-the values themselves, on the enum member instances. 
+An alternative syntax that creates an 'enum' with object-valued (instead of
+Number-valued, as in `bitFlag`) members. While this has higher one-time
+allocation cost, there are more utilities for working with the values
+themselves on the enum member instances. 
 
 ```ts
 const PermissionsFlag = createBitFlagsEnum(['Read', 'Write', 'Execute'] as const);
