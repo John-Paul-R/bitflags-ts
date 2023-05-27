@@ -39,14 +39,63 @@ function intersectBitFlags<TValues extends readonly string[]>(
 type SingleEnumValue<TValues extends readonly string[]> =
   TValues[keyof TValues extends number ? keyof TValues : never];
 
+/**
+ * Represents either a bitflag enum member or a union of bitflag enum members
+ */
 export interface BitFlagValue<TValues extends readonly string[]> {
+  /**
+   * The backing bitflag value
+   */
   readonly value: number;
+
+  /**
+   * Creates a new BitFlagValue representing the union of the operands
+   * @example
+   * const union = Color.Red.or(Color.Blue);
+   * union.hasFlag(Color.Red) // true
+   * union.hasFlag(Color.Blue) // true
+   * union.hasFlag(Color.Green) // false
+   */
   or: (other: BitFlagValue<TValues>) => BitFlagValue<TValues>;
+
+  /**
+   * Creates a new BitFlagValue representing the union of the operands
+   * @example
+   * const union = Color.Red.union([Color.Blue, Color.Green]);
+   * union.hasFlag(Color.Red) // true
+   * union.hasFlag(Color.Blue) // true
+   * union.hasFlag(Color.Green) // true
+   * union.hasFlag(Color.Purple) // false
+   */
   union: (others: BitFlagValue<TValues>[]) => BitFlagValue<TValues>;
+
+  /**
+   * @returns `true` if `other` is present in `this`, `false` otherwise
+   * @example
+   * const union = Color.Red.or(Color.Blue);
+   * union.hasFlag(Color.Red) // true
+   * union.hasFlag(Color.Blue) // true
+   * union.hasFlag(Color.Green) // false
+   */
   hasFlag: (other: BitFlagValue<TValues>) => boolean;
+
+  // TODO: this should probably just intersect a single BitFlagValue. Right now,
+  // there is no way to intersect w/o creating an array, which is bad. Breaking
+  // change, though.
+  /**
+   * Creates a new BitFlagValue representing the intersection of the operands
+   * @example
+   * const union = Color.Red.or(Color.Blue).intersect([Color.Red, Color.Green]);
+   * union.hasFlag(Color.Red) // true
+   * union.hasFlag(Color.Blue) // false
+   * union.hasFlag(Color.Green) // false
+   */
   intersect: (others: BitFlagValue<TValues>[]) => BitFlagValue<TValues>;
 }
 
+/**
+ * Represents a bitflag enum member
+ */
 export interface BitFlagEnumValue<TValues extends readonly string[]>
   extends BitFlagValue<TValues> {
   stringValue: SingleEnumValue<TValues>;
