@@ -122,7 +122,7 @@ type EnumValues<TValues extends readonly string[]> = string[] extends TValues
  * Constructs an enum-like type, with members of the names specified in 'values'
  *
  * @param values an array containing the string names for the members of the
- * contructed 'enum'. The array must be declared with `as const`.
+ * constructed 'enum'. The array must be declared with `as const`.
  * @example const Color = createBitFlagsEnum(['Red', 'Green', 'Blue'] as const)
  */
 export const createBitFlagsEnum = <TValues extends readonly string[]>(
