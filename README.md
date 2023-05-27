@@ -3,6 +3,7 @@
 An enum-like type for representing & using bit flags
 
 ![build-status-badge](https://img.shields.io/github/actions/workflow/status/John-Paul-R/bitflags-ts/node.js.yml?label=build%20%26%20test)
+![npm bundle size](https://img.shields.io/bundlephobia/min/bitflags-ts)
 
 ## Usage
 
