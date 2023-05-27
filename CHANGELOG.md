@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.3](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.2...bitflags-ts-v1.2.3) (2023-05-27)
+
+
+### Bug Fixes
+
+* **automation:** npm-publish.yml - actually run `npm run build`... ([ee8b9b2](https://github.com/John-Paul-R/bitflags-ts/commit/ee8b9b24739625f250768423ad06e19d1ae10277))
+
 ## [1.2.2](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.1...bitflags-ts-v1.2.2) (2023-05-27)
 
 
