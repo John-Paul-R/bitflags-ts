@@ -4,6 +4,13 @@ import { BitFlagValue, createBitFlagsEnum } from './bitflag_classes';
 
 const sourceArray = ['Read', 'Write', 'Execute'] as const;
 const Perms = createBitFlagsEnum(sourceArray);
+{
+  const sourceArray2 = ['Read', 'Write', 'Execute'];
+  // @ts-expect-error We disallow non-"as const" values, since it makes it
+  // impossible to inspect the elements in the array from TS, causing the
+  // enum-like type safety to be lost
+  const Perms2 = createBitFlagsEnum(sourceArray2);
+}
 
 test('enum created with expected values', (t) => {
   t.is(Perms.Read.value, 1);

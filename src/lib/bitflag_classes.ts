@@ -110,8 +110,21 @@ class BitFlagEnumImpl<TArr extends readonly string[]> {
   }
 }
 
+/**
+ * Enforces that the provided string array must be declared with the `as const`
+ * postfix. The "as const" enables the elements in the array to be used to
+ * construct the enum-like types.
+ */
+type EnumValues<TValues extends readonly string[]> = string[] extends TValues ? never : TValues;
+/**
+ * Constructs an enum-like type, with members of the names specified in 'values'
+ *
+ * @param values an array containing the string names for the members of the
+ * contructed 'enum'. The array must be declared with `as const`.
+ * @example const Color = createBitFlagsEnum(['Red', 'Green', 'Blue'] as const)
+ */
 export const createBitFlagsEnum = <TValues extends readonly string[]>(
-  values: TValues
+  values: EnumValues<TValues>
 ): BitFlagEnumV2<TValues> => {
   return new BitFlagEnumImpl(values) as BitFlagEnumV2<TValues>;
 };
