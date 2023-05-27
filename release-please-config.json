@@ -1,8 +1,7 @@
 {
   "packages": {
     ".": {
-        "bootstrap-sha": "c3316fa9e48e27b8bac98828a5fc23c6324e9486",
-        "release-as": "1.1.0"
+        "bootstrap-sha": "c3316fa9e48e27b8bac98828a5fc23c6324e9486"
     }
   }
 }
