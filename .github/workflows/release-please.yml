@@ -16,3 +16,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           command: manifest
+          token: ${{ secrets.CUSTOM_PAT_WITH_WORKFLOWS_ACCESS }}
