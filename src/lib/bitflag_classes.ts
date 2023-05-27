@@ -115,7 +115,9 @@ class BitFlagEnumImpl<TArr extends readonly string[]> {
  * postfix. The "as const" enables the elements in the array to be used to
  * construct the enum-like types.
  */
-type EnumValues<TValues extends readonly string[]> = string[] extends TValues ? never : TValues;
+type EnumValues<TValues extends readonly string[]> = string[] extends TValues
+  ? never
+  : TValues;
 /**
  * Constructs an enum-like type, with members of the names specified in 'values'
  *
