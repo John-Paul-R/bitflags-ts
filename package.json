@@ -14,7 +14,7 @@
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:lint": "eslint src --ext .ts --fix",
-    "test": "run-s build test:*",
+    "test": "run-s test:*",
     "test:lint": "eslint src --ext .ts",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
@@ -68,6 +68,7 @@
     "rollup-plugin-sourcemaps": "^0.6.3",
     "standard-version": "^9.0.0",
     "ts-node": "^9.0.0",
+    "tsx": "^3.12.7",
     "typedoc": "^0.24.7",
     "typescript": "^4.0.2"
   },
@@ -83,11 +84,12 @@
   "ava": {
     "failFast": true,
     "timeout": "60s",
-    "typescript": {
-      "rewritePaths": {
-        "src/": "build/main/"
-      }
+    "extensions": {
+      "ts": "module"
     },
+    "nodeArguments": [
+      "--loader=tsx"
+    ],
     "files": [
       "!build/module/**"
     ]
