@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.4](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.3...bitflags-ts-v1.2.4) (2023-05-27)
+
+
+### Bug Fixes
+
+* package.json "types" path ([a9e9ed5](https://github.com/John-Paul-R/bitflags-ts/commit/a9e9ed573c89ed7100f98682f6621d6f2f98ee2a))
+
 ## [1.2.3](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.2...bitflags-ts-v1.2.3) (2023-05-27)
 
 

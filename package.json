@@ -1,6 +1,6 @@
 {
   "name": "bitflags-ts",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "type": "module",
   "description": "An enum-like type for representing & using bit flags",
   "main": "dist/main/bundle.min.js",
