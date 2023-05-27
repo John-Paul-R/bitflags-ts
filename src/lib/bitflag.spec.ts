@@ -12,7 +12,8 @@ test('bitFlag_KeyValuesMatch', (t) => {
   t.is(permsFlags.stringValueOf(2), 'Write');
   t.is(permsFlags.stringValueOf(3), undefined);
   t.is(permsFlags.stringValueOf(4), 'Execute');
-  t.is(3, Object.keys(permsFlags).length);
+  t.is(Object.keys(permsFlags).length, 5);
+  t.is(permsFlags.keys.length, 3);
 });
 
 test('bitFlag_Union_CreatesCorrectValues', (t) => {
