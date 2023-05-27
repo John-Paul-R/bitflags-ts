@@ -1,21 +1,26 @@
 import test from 'ava';
 
-import { bitFlag } from './bitflag';
+import { bitFlagIfy } from './bitflagify';
 
-const permsFlags = bitFlag('Read', 'Write', 'Execute');
+enum Perms {
+  Read,
+  Write,
+  Execute,
+}
 
-test('bitFlag_KeyValuesMatch', (t) => {
+test('bitFlagIfy_KeyValuesMatch', (t) => {
+  const permsFlags = bitFlagIfy(Perms);
   t.is(permsFlags.Read, 1);
   t.is(permsFlags.Write, 2);
   t.is(permsFlags.Execute, 4);
-  t.is(permsFlags.stringValueOf(1), 'Read');
-  t.is(permsFlags.stringValueOf(2), 'Write');
-  t.is(permsFlags.stringValueOf(3), undefined);
-  t.is(permsFlags.stringValueOf(4), 'Execute');
-  t.is(3, Object.keys(permsFlags).length);
+  t.is(permsFlags[1], 'Read');
+  t.is(permsFlags[2], 'Write');
+  t.is(permsFlags[4], 'Execute');
+  t.is(6, Object.keys(permsFlags).length);
 });
 
-test('bitFlag_Union_CreatesCorrectValues', (t) => {
+test('bitFlagIfy_Union_CreatesCorrectValues', (t) => {
+  const permsFlags = bitFlagIfy(Perms);
   t.is(
     permsFlags.union(permsFlags.Read, permsFlags.Write, permsFlags.Execute)
       .value,
@@ -26,7 +31,9 @@ test('bitFlag_Union_CreatesCorrectValues', (t) => {
   t.is(permsFlags.union().value, 0);
 });
 
-test('bitFlag_Union_HasFlag', (t) => {
+test('bitFlagIfy_Union_HasFlag', (t) => {
+  const permsFlags = bitFlagIfy(Perms);
+
   {
     const union = permsFlags.union(
       permsFlags.Read,
@@ -70,11 +77,4 @@ test('bitFlag_Union_HasFlag', (t) => {
     t.false(union.hasFlag(permsFlags.Execute));
     t.false(union.hasFlag(0b1000));
   }
-});
-
-test('bitFlag_keys', (t) => {
-  const keys = permsFlags.keys;
-  t.is(keys[0], 'Read');
-  t.is(keys[1], 'Write');
-  t.is(keys[2], 'Execute');
 });
