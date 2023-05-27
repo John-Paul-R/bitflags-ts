@@ -1,8 +1,9 @@
-import sourcemaps from 'rollup-plugin-sourcemaps';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-import pkg from './package.json' assert { type: 'json' };
 import typescript from '@rollup/plugin-typescript';
+import sourcemaps from 'rollup-plugin-sourcemaps';
+
+import pkg from './package.json' assert { type: 'json' };
 
 const baseUmdConfig = {
   name: pkg.name,
