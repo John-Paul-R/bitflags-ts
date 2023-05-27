@@ -4,7 +4,7 @@
   "type": "module",
   "description": "An enum-like type for representing & using bit flags",
   "main": "dist/main/bundle.min.js",
-  "typings": "dist/types/index.d.ts",
+  "typings": "dist/main/types/index.d.ts",
   "module": "dist/module/index.min.js",
   "repository": "https://github.com/John-Paul-R/bitflags-ts",
   "license": "MIT",
