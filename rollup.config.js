@@ -6,7 +6,6 @@ import typescript from '@rollup/plugin-typescript';
 
 const baseUmdConfig = {
   name: pkg.name,
-  file: 'dist/bundle.js',
   format: 'umd',
   exports: 'named',
   sourcemap: true,
@@ -20,22 +19,22 @@ export default {
   output: [
     {
       ...baseUmdConfig,
-      file: 'dist/bundle.js',
+      file: 'dist/main/bundle.js',
       plugins: [],
     },
     {
       ...baseUmdConfig,
-      file: 'dist/bundle.min.js',
+      file: 'dist/main/bundle.min.js',
       plugins: [terser()],
     },
     {
-      file: `dist/index.js`,
+      file: `dist/module/index.js`,
       format: 'esm',
       sourcemap: true,
       plugins: [],
     },
     {
-      file: `dist/index.min.js`,
+      file: `dist/module/index.min.js`,
       format: 'esm',
       sourcemap: true,
       plugins: [terser()],
