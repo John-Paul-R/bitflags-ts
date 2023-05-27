@@ -31,7 +31,7 @@
 <h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">values</span>: <span class="tsd-signature-type tsd-kind-type-parameter">TArr</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">BitFlagEnum</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TArr</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag.ts#L74">lib/bitflag.ts:74</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/80f5a64/src/lib/bitflag.ts#L53">lib/bitflag.ts:53</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

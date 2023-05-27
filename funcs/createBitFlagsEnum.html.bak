@@ -39,7 +39,7 @@ constructed &#39;enum&#39;. The array must be declared with <code>as const</code
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">BitFlagEnumV2</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">TValues</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/6f9a96b/src/lib/bitflag_classes.ts#L177">lib/bitflag_classes.ts:177</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/John-Paul-R/bitflags-ts/blob/80f5a64/src/lib/bitflag_classes.ts#L177">lib/bitflag_classes.ts:177</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
