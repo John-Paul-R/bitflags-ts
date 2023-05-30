@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.5](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.4...bitflags-ts-v1.2.5) (2023-05-27)
+
+
+### Bug Fixes
+
+* `bitflag` setup performance and break out `bitflagify` to own file ([dd16647](https://github.com/John-Paul-R/bitflags-ts/commit/dd1664796688f9de1aefc8065b2904e3aa30d7e3))
+* update `bitflags` to test for `keys` len, allow methods ([80f5a64](https://github.com/John-Paul-R/bitflags-ts/commit/80f5a64641335f2a3df59a027362a6d4cb881150))
+
 ## [1.2.4](https://github.com/John-Paul-R/bitflags-ts/compare/bitflags-ts-v1.2.3...bitflags-ts-v1.2.4) (2023-05-27)
 
 
